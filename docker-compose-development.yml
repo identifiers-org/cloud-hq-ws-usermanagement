@@ -1,5 +1,6 @@
 # Development environment HQ User Management API Service
 # Author: Manuel Bernal Llinares <mbdebian@gmail.com>
+# TODO - This part doesn't really do the job, as the mongo image should be customized with the given credentials
 version: "3"
 services:
     mongo:
