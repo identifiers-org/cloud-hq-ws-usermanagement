@@ -61,3 +61,13 @@ container_production_push: container_production_build
 	@echo "<===|DEVOPS|===> [PUBLISH]> Production container $(container_name):$(tag_version)"
 	@docker push $(container_name):$(tag_version)
 	@docker push $(container_name):latest
+
+dev_container_build: clean container_production_build
+	@echo "<===|DEVOPS|===> [DEV] Preparing local container"
+
+clean:
+	@echo "<===|DEVOPS|===> [CLEAN] Cleaning the space"
+	@mvn clean > /dev/null
+	@mvn versions:commit
+
+.PHONY: all clean app_structure container_production_build container_production_push dev_container_build deploy release sync_project_version set_next_development_version
