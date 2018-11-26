@@ -16,6 +16,8 @@ import java.util.UUID;
 public class HealthApiModel {
     private static String runningSessionId = UUID.randomUUID().toString();
 
+    // TODO - Elaborate a little bit more on the meaning of the different endpoints
+
     public String livenessCheck() {
         return runningSessionId;
     }
