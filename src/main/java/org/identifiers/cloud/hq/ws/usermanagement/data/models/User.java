@@ -31,4 +31,58 @@ public class User {
     private boolean verified = false;
     private boolean active = false;
     @DBRef private List<Role> roles = new ArrayList<>();
+
+    public BigInteger getId() {
+        return id;
+    }
+
+    public User setId(BigInteger id) {
+        this.id = id;
+        return this;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public User setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public User setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
+    public boolean isVerified() {
+        return verified;
+    }
+
+    public User setVerified(boolean verified) {
+        this.verified = verified;
+        return this;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public User setActive(boolean active) {
+        this.active = active;
+        return this;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public User setRoles(List<Role> roles) {
+        this.roles = roles;
+        return this;
+    }
 }
