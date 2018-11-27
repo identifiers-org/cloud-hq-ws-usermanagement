@@ -2,6 +2,8 @@ package org.identifiers.cloud.hq.ws.usermanagement.data.models;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigInteger;
+
 /**
  * Project: user-management
  * Package: org.identifiers.cloud.hq.ws.usermanagement.data.models
@@ -14,4 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document
 public class Role {
+    private BigInteger id;
+    private String name;
+    private String description;
 }
