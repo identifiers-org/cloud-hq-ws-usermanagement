@@ -24,5 +24,5 @@ public class AccountVerificationToken {
     @Id private String id = UUID.randomUUID().toString();
     private Timestamp created = new Timestamp(System.currentTimeMillis());
     private Timestamp expiryDate = new Timestamp(created.getTime() + AccountVerificationToken.VERIFICATION_TOKEN_TTL_MILLIS);
-    
+    private boolean used = false;
 }
