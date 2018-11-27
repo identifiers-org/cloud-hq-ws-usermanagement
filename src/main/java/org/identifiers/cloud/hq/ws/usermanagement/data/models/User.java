@@ -26,6 +26,7 @@ public class User {
     @NotNull(message = "It is mandatory for a user to have an e-mail address")
     @Indexed(unique = true)
     private String email;
+    private String password;
     // By default, a newly created account is neither verified nor active
     private boolean verified = false;
     private boolean active = false;
