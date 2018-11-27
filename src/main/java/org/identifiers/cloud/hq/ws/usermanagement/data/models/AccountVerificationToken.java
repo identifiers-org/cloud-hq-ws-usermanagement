@@ -7,6 +7,8 @@ package org.identifiers.cloud.hq.ws.usermanagement.data.models;
  *
  * @author Manuel Bernal Llinares <mbdebian@gmail.com>
  * ---
+ *
+ * This model represents an account verification token
  */
 public class AccountVerificationToken {
 }
