@@ -1,8 +1,10 @@
 package org.identifiers.cloud.hq.ws.usermanagement.data.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
 import java.math.BigInteger;
 
 /**
@@ -16,5 +18,9 @@ import java.math.BigInteger;
 @Document
 public class User {
     @Id private BigInteger id;
-    
+    @NotNull(message = "It is mandatory for a user to have an e-mail address")
+    @Indexed(unique = true)
+    private String email;
+    private boolean verified = false;
+    private boolean active = false;
 }
