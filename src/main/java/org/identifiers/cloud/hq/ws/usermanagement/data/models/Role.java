@@ -1,5 +1,7 @@
 package org.identifiers.cloud.hq.ws.usermanagement.data.models;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * Project: user-management
  * Package: org.identifiers.cloud.hq.ws.usermanagement.data.models
@@ -7,6 +9,9 @@ package org.identifiers.cloud.hq.ws.usermanagement.data.models;
  *
  * @author Manuel Bernal Llinares <mbdebian@gmail.com>
  * ---
+ *
+ * This model represents a role that can be associated with a user
  */
+@Document
 public class Role {
 }
