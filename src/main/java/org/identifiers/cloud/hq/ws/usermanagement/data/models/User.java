@@ -31,6 +31,7 @@ public class User {
     private boolean verified = false;
     private boolean active = false;
     @DBRef private List<Role> roles = new ArrayList<>();
+    @DBRef private List<AccountVerificationToken> accountVerificationTokens = new ArrayList<>();
 
     public BigInteger getId() {
         return id;
