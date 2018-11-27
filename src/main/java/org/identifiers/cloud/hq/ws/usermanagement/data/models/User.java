@@ -14,6 +14,8 @@ import java.math.BigInteger;
  *
  * @author Manuel Bernal Llinares <mbdebian@gmail.com>
  * ---
+ *
+ * This models the main document that represents a user, and the minimum amount of information around it.
  */
 @Document
 public class User {
