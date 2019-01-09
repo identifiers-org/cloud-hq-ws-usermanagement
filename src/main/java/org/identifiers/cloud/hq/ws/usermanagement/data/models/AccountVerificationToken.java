@@ -25,40 +25,4 @@ public class AccountVerificationToken {
     private Timestamp created = new Timestamp(System.currentTimeMillis());
     private Timestamp expiryDate = new Timestamp(created.getTime() + AccountVerificationToken.VERIFICATION_TOKEN_TTL_MILLIS);
     private boolean used = false;
-
-    public String getId() {
-        return id;
-    }
-
-    public AccountVerificationToken setId(String id) {
-        this.id = id;
-        return this;
-    }
-
-    public Timestamp getCreated() {
-        return created;
-    }
-
-    public AccountVerificationToken setCreated(Timestamp created) {
-        this.created = created;
-        return this;
-    }
-
-    public Timestamp getExpiryDate() {
-        return expiryDate;
-    }
-
-    public AccountVerificationToken setExpiryDate(Timestamp expiryDate) {
-        this.expiryDate = expiryDate;
-        return this;
-    }
-
-    public boolean isUsed() {
-        return used;
-    }
-
-    public AccountVerificationToken setUsed(boolean used) {
-        this.used = used;
-        return this;
-    }
 }
