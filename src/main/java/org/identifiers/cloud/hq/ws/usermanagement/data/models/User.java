@@ -6,7 +6,6 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +21,7 @@ import java.util.List;
  */
 @Document
 public class User {
-    @Id private BigInteger id;
+    @Id private String id;
     @NotNull(message = "It is mandatory for a user to have an e-mail address")
     @Indexed(unique = true)
     private String email;
@@ -32,58 +31,4 @@ public class User {
     private boolean active = false;
     @DBRef private List<Role> roles = new ArrayList<>();
     @DBRef private List<AccountVerificationToken> accountVerificationTokens = new ArrayList<>();
-
-    public BigInteger getId() {
-        return id;
-    }
-
-    public User setId(BigInteger id) {
-        this.id = id;
-        return this;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public User setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public User setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-
-    public boolean isVerified() {
-        return verified;
-    }
-
-    public User setVerified(boolean verified) {
-        this.verified = verified;
-        return this;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public User setActive(boolean active) {
-        this.active = active;
-        return this;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public User setRoles(List<Role> roles) {
-        this.roles = roles;
-        return this;
-    }
 }
