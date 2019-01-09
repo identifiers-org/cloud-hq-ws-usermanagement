@@ -20,7 +20,13 @@ public class AuthenticationApiController {
 
     @GetMapping("/unprotected")
     public @ResponseBody
-    String unprotected() {
+    String unprotectedEndpoint() {
         return "This is the unprotected endpoint";
+    }
+
+    @GetMapping("/protected")
+    public @ResponseBody
+    String protectedEndpoint() {
+        return "This is the PROTECTED endpoint";
     }
 }
