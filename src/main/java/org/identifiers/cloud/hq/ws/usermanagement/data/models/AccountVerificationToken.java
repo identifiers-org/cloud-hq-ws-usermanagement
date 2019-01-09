@@ -32,6 +32,7 @@ public class AccountVerificationToken {
     public static final long VERIFICATION_TOKEN_TTL_MILLIS = 48 * 3600 * 1000;
     // This makes sure the token is there when dealing with objects of this class
     @Id private String id = UUID.randomUUID().toString();
+    // TODO - Change this, as I'll have serialization problems with it
     private Timestamp created = new Timestamp(System.currentTimeMillis());
     private Timestamp expiryDate = new Timestamp(created.getTime() + AccountVerificationToken.VERIFICATION_TOKEN_TTL_MILLIS);
     private boolean used = false;
