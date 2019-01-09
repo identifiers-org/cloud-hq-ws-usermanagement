@@ -1,5 +1,7 @@
 package org.identifiers.cloud.hq.ws.usermanagement.api.models;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Project: user-management
  * Package: org.identifiers.cloud.hq.ws.usermanagement.api.models
@@ -8,5 +10,6 @@ package org.identifiers.cloud.hq.ws.usermanagement.api.models;
  * @author Manuel Bernal Llinares <mbdebian@gmail.com>
  * ---
  */
+@Component
 public class AuthenticationApiModel {
 }
