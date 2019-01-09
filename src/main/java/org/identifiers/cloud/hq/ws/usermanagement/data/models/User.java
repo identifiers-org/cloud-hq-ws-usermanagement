@@ -1,5 +1,10 @@
 package org.identifiers.cloud.hq.ws.usermanagement.data.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -19,6 +24,11 @@ import java.util.List;
  *
  * This models the main document that represents a user, and the minimum amount of information around it.
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+@Accessors(chain = true)
 @Document
 public class User {
     @Id private String id;
