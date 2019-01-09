@@ -1,5 +1,10 @@
 package org.identifiers.cloud.hq.ws.usermanagement.data.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -16,6 +21,11 @@ import java.util.UUID;
  *
  * This model represents an account verification token
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+@Accessors(chain = true)
 @Document
 public class AccountVerificationToken {
     // 48 hours is the default expiry date for an authorization token
