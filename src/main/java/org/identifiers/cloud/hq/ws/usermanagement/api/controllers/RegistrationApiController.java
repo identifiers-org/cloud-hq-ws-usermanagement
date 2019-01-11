@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.*;
 public class RegistrationApiController {
     // TODO
 
+    // When all is implemented, the client service calling this method will have to be authenticated and authorised for
+    // registering users, e.g. a web frontend could be using some kind of 'service credentials' for sending request to
+    // this API endpoint
     @PostMapping("registerUser")
     public @ResponseBody
     String registerUser(@RequestBody UserRegistrationRequestModel userRegistrationRequestModel) {
