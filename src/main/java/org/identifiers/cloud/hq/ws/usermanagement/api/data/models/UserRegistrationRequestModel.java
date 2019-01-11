@@ -20,4 +20,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode
 @Accessors(chain = true)
 public class UserRegistrationRequestModel {
+
+    private String username;
+    private String userpassword;
 }
