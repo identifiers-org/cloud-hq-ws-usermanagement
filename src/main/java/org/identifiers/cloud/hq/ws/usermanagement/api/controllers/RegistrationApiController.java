@@ -1,7 +1,7 @@
 package org.identifiers.cloud.hq.ws.usermanagement.api.controllers;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.identifiers.cloud.hq.ws.usermanagement.api.data.models.UserRegistrationRequestModel;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Project: user-management
@@ -16,4 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegistrationApiController {
     // TODO
 
+    @PostMapping("registerUser")
+    public @ResponseBody
+    String registerUser(@RequestBody UserRegistrationRequestModel userRegistrationRequestModel) {
+        return "User registration request received for " + userRegistrationRequestModel.toString();
+    }
 }
