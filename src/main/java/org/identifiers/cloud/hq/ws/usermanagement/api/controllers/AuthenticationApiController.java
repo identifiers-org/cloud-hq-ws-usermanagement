@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
+
 /**
  * Project: user-management
  * Package: org.identifiers.cloud.hq.ws.usermanagement.api.controllers
@@ -27,7 +29,7 @@ public class AuthenticationApiController {
 
     @GetMapping("/protected")
     public @ResponseBody
-    String protectedEndpoint() {
-        return "This is the PROTECTED endpoint";
+    String protectedEndpoint(Principal principal) {
+        return "This is the PROTECTED endpoint - " + principal.getName();
     }
 }
