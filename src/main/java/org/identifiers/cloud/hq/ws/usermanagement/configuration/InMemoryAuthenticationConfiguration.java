@@ -21,7 +21,7 @@ import org.springframework.security.provisioning.UserDetailsManager;
 public class InMemoryAuthenticationConfiguration {
 
     @Bean
-    public UserDetailsService userDetailsService() {
+    public UserDetailsService memory() {
         return new InMemoryUserDetailsManager();
     }
 
