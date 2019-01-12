@@ -1,6 +1,8 @@
 package org.identifiers.cloud.hq.ws.usermanagement.configuration;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 /**
@@ -11,6 +13,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * @author Manuel Bernal Llinares <mbdebian@gmail.com>
  * ---
  */
+@EnableWebSecurity
+@Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     // TODO
 
