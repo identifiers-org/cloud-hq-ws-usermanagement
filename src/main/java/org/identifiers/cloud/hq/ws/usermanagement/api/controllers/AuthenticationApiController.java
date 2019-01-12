@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthenticationApiController {
     // TODO
 
+    // TODO - Mark this endpoint as not authenticated
     @GetMapping("/unprotected")
     public @ResponseBody
     String unprotectedEndpoint() {
