@@ -5,6 +5,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Project: user-management
@@ -15,11 +16,11 @@ import java.util.Collection;
  * ---
  */
 public class UserDetailsModel extends User implements UserDetails {
-    // TODO
+    private List<GrantedAuthority> grantedAuthorities;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return grantedAuthorities;
     }
 
     @Override
