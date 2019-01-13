@@ -1,5 +1,6 @@
 package org.identifiers.cloud.hq.ws.usermanagement.data.repositories;
 
+import org.identifiers.cloud.hq.ws.usermanagement.data.models.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author Manuel Bernal Llinares <mbdebian@gmail.com>
  * ---
  */
-public interface UserRepository extends MongoRepository<User, string> {
+public interface UserRepository extends MongoRepository<User, String> {
     // TODO
+    
 }
