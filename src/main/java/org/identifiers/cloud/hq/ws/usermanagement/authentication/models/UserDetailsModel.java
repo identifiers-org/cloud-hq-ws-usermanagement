@@ -28,6 +28,7 @@ public class UserDetailsModel extends User implements UserDetails {
         return getEmail();
     }
 
+    // We have no notion of expiry date on accounts right now
     @Override
     public boolean isAccountNonExpired() {
         return false;
