@@ -1,5 +1,6 @@
 package org.identifiers.cloud.hq.ws.usermanagement.authentication.services;
 
+import org.identifiers.cloud.hq.ws.usermanagement.data.models.User;
 import org.identifiers.cloud.hq.ws.usermanagement.data.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,6 +23,8 @@ public class MongoUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        User user = userRepository.findByEmail(s);
+        // TODO
         return null;
     }
 }
