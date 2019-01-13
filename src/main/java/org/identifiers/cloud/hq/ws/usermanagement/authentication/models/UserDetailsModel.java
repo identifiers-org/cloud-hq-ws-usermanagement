@@ -31,7 +31,7 @@ public class UserDetailsModel extends User implements UserDetails {
     // We have no notion of expiry date on accounts right now
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
