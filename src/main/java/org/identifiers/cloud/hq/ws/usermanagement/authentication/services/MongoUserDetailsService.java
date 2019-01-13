@@ -1,6 +1,8 @@
 package org.identifiers.cloud.hq.ws.usermanagement.authentication.services;
 
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 /**
  * Project: user-management
@@ -11,4 +13,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
  * ---
  */
 public class MongoUserDetailsService implements UserDetailsService {
+    @Override
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        return null;
+    }
 }
