@@ -1,7 +1,10 @@
 package org.identifiers.cloud.hq.ws.usermanagement.authentication.models;
 
 import org.identifiers.cloud.hq.ws.usermanagement.data.models.User;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
 
 /**
  * Project: user-management
@@ -13,4 +16,34 @@ import org.springframework.security.core.userdetails.UserDetails;
  */
 public class UserDetailsModel extends User implements UserDetails {
     // TODO
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
+    }
+
+    @Override
+    public String getUsername() {
+        return null;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return false;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return false;
+    }
 }
