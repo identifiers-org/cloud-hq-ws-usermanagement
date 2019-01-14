@@ -1,6 +1,5 @@
 package org.identifiers.cloud.hq.ws.usermanagement.authentication.models;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -21,7 +20,6 @@ import java.util.List;
  * ---
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 @Accessors(chain = true)

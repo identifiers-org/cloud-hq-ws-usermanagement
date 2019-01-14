@@ -32,7 +32,6 @@ public class MongoUserDetailsService implements UserDetailsService {
 
         UserDetailsModel userDetailsModel = new UserDetailsModel();
         userDetailsModel.setUser(user);
-        
         // TODO
         return null;
     }
