@@ -1,5 +1,6 @@
 package org.identifiers.cloud.hq.ws.usermanagement.authentication.services;
 
+import org.identifiers.cloud.hq.ws.usermanagement.authentication.models.UserDetailsModel;
 import org.identifiers.cloud.hq.ws.usermanagement.data.models.User;
 import org.identifiers.cloud.hq.ws.usermanagement.data.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,10 @@ public class MongoUserDetailsService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("User " + s + " NOT FOUND");
         }
+
+        UserDetailsModel userDetailsModel = new UserDetailsModel();
+        userDetailsModel.setUser(user);
+        
         // TODO
         return null;
     }
