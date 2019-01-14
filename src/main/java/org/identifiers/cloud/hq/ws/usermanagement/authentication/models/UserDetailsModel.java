@@ -27,6 +27,10 @@ public class UserDetailsModel implements UserDetails {
     private User user;
     private List<GrantedAuthority> grantedAuthorities;
 
+    private List<GrantedAuthority> computeGrantedAuthorities() {
+        // TODO
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return grantedAuthorities;
