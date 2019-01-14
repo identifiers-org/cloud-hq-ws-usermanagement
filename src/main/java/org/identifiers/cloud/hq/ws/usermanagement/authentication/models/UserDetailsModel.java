@@ -36,7 +36,7 @@ public class UserDetailsModel implements UserDetails {
 
     @Override
     public String getUsername() {
-        return getEmail();
+        return user.getEmail();
     }
 
     // We have no notion of expiry date on accounts right now
