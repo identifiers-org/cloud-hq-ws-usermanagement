@@ -39,9 +39,10 @@ public class UserDetailsModel extends User implements UserDetails {
         return false;
     }
 
+    // We don't have a mechanism for credentials expiration right now
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
