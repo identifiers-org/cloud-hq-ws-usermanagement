@@ -59,6 +59,6 @@ public class UserDetailsModel implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return isActive();
+        return user.isActive();
     }
 }
