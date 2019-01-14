@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 import org.identifiers.cloud.hq.ws.usermanagement.data.models.User;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
@@ -25,9 +26,9 @@ import java.util.List;
 @Accessors(chain = true)
 public class UserDetailsModel implements UserDetails {
     private User user;
-    private List<GrantedAuthority> grantedAuthorities;
+    private List<SimpleGrantedAuthority> grantedAuthorities;
 
-    private List<GrantedAuthority> computeGrantedAuthorities() {
+    private List<SimpleGrantedAuthority> computeGrantedAuthorities() {
         // TODO
     }
 
