@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Project: user-management
@@ -29,7 +30,9 @@ public class UserDetailsModel implements UserDetails {
     private List<SimpleGrantedAuthority> grantedAuthorities;
 
     private List<SimpleGrantedAuthority> computeGrantedAuthorities() {
-        // TODO
+        return user.getRoles().parallelStream()
+                .map(role -> new SimpleGrantedAuthority(role.getName()))
+                .collect(Collectors.toList());
     }
 
     @Override
