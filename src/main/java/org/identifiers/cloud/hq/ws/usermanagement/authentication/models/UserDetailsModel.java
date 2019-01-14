@@ -16,6 +16,7 @@ import java.util.List;
  * ---
  */
 public class UserDetailsModel implements UserDetails {
+    private User user;
     private List<GrantedAuthority> grantedAuthorities;
 
     @Override
