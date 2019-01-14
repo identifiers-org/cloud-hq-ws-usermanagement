@@ -26,13 +26,13 @@ public class MongoUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        log.info("Loading user by username - '" + s + "'");
         User user = userRepository.findByEmail(s);
 
         if (user == null) {
+            log.error("Loading user by username - '" + s + "', NOT FOUND");
             throw new UsernameNotFoundException("User " + s + " NOT FOUND");
         }
-
+        log.info("Loading user by username - '" + s + "', user LOCATED");
         UserDetailsModel userDetailsModel = new UserDetailsModel();
         userDetailsModel.setUser(user);
         // TODO
