@@ -28,8 +28,6 @@ public class MongoUserDetailsService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("User " + s + " NOT FOUND");
         }
-
-        UserDetails
         // TODO
         return null;
     }

@@ -15,7 +15,7 @@ import java.util.List;
  * @author Manuel Bernal Llinares <mbdebian@gmail.com>
  * ---
  */
-public class UserDetailsModel extends User implements UserDetails {
+public class UserDetailsModel implements UserDetails {
     private List<GrantedAuthority> grantedAuthorities;
 
     @Override
