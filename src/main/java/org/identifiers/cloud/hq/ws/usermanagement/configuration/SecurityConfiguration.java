@@ -21,8 +21,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // HTTP Basic based authentication
-        http.httpBasic();
-        // Set all request to be authenticated
-        http.authorizeRequests().anyRequest().authenticated();
+        http
+                .csrf().disable()
+                .authorizeRequests().anyRequest().authenticated()
+                .and().httpBasic()
+                .and().sessionManagement().disable();
     }
 }
