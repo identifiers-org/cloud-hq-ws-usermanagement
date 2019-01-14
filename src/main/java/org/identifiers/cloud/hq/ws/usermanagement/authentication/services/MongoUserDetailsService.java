@@ -1,5 +1,6 @@
 package org.identifiers.cloud.hq.ws.usermanagement.authentication.services;
 
+import lombok.extern.slf4j.Slf4j;
 import org.identifiers.cloud.hq.ws.usermanagement.authentication.models.UserDetailsModel;
 import org.identifiers.cloud.hq.ws.usermanagement.data.models.User;
 import org.identifiers.cloud.hq.ws.usermanagement.data.repositories.UserRepository;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Component;
  * @author Manuel Bernal Llinares <mbdebian@gmail.com>
  * ---
  */
+@Slf4j
 @Component
 public class MongoUserDetailsService implements UserDetailsService {
     @Autowired
@@ -24,6 +26,7 @@ public class MongoUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        log.info("Loading user by username - '" + s + "'");
         User user = userRepository.findByEmail(s);
 
         if (user == null) {
