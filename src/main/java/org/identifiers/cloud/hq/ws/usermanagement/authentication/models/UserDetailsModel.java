@@ -34,9 +34,10 @@ public class UserDetailsModel extends User implements UserDetails {
         return true;
     }
 
+    // We don't have a mechanism to lock accounts right now
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     // We don't have a mechanism for credentials expiration right now
