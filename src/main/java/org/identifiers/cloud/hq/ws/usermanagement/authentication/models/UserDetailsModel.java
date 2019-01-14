@@ -1,5 +1,10 @@
 package org.identifiers.cloud.hq.ws.usermanagement.authentication.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 import org.identifiers.cloud.hq.ws.usermanagement.data.models.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,6 +20,11 @@ import java.util.List;
  * @author Manuel Bernal Llinares <mbdebian@gmail.com>
  * ---
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
+@Accessors(chain = true)
 public class UserDetailsModel implements UserDetails {
     private User user;
     private List<GrantedAuthority> grantedAuthorities;
