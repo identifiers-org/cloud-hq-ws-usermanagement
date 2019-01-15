@@ -1,7 +1,5 @@
 // Some sample users for preloading MongoDB, this will improve and get integrated as part of the testing data for the web service.
 
-db.role.insert({
-    "_id": 1,
-    "name": "admin",
-    "description": "Admin role"
-});
+// Create collections
+db.createCollection("role")
+db.createCollection("user")
