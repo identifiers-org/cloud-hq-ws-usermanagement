@@ -19,7 +19,7 @@ db.role.insert({
 
 db.user.insert({
     "email": "admin@fakemail.com",
-    "password": "{bcrypt}$2a$10$YSPpgNzOw2aIoPixlK655eEvQtsDuiFCMJKKej6PkaXoH38f9c.RW",
+    "password": "$2a$10$YSPpgNzOw2aIoPixlK655eEvQtsDuiFCMJKKej6PkaXoH38f9c.RW",
     "verified": "true",
     "active": "true",
     "roles": [
@@ -30,7 +30,7 @@ db.user.insert({
 
 db.user.insert({
     "email": "user@fakemail.com",
-    "password": "{bcrypt}$2a$10$YSPpgNzOw2aIoPixlK655eEvQtsDuiFCMJKKej6PkaXoH38f9c.RW",
+    "password": "$2a$10$YSPpgNzOw2aIoPixlK655eEvQtsDuiFCMJKKej6PkaXoH38f9c.RW",
     "verified": "true",
     "active": "true",
     "roles": [
