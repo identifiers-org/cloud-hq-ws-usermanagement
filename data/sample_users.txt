@@ -10,3 +10,9 @@ db.role.insert({
     "name": "admin",
     "description": "Admin role"
 });
+
+db.role.insert({
+    "_id": ObjectId("5c3dcd03a0cf1dd3c021be11"),
+    "name": "user",
+    "description": "User role"
+});
