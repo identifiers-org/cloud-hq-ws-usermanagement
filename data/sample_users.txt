@@ -1,5 +1,12 @@
 // Some sample users for preloading MongoDB, this will improve and get integrated as part of the testing data for the web service.
 
 // Create collections
-db.createCollection("role")
-db.createCollection("user")
+db.createCollection("role");
+db.createCollection("user");
+
+// Insert data
+db.role.insert({
+    "_id": ObjectId("5c3dcd03a0cf1dd3c021be10"),
+    "name": "admin",
+    "description": "Admin role"
+});
