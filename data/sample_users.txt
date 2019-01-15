@@ -16,3 +16,14 @@ db.role.insert({
     "name": "user",
     "description": "User role"
 });
+
+db.user.insert({
+    "email": "admin@fakemail.com",
+    "password": "{bcrypt}$2a$10$YSPpgNzOw2aIoPixlK655eEvQtsDuiFCMJKKej6PkaXoH38f9c.RW",
+    "verified": "true",
+    "active": "true",
+    "roles": [
+        {"$ref": "role", "$id": ObjectId("1")}
+    ],
+        "accountVerificationTokens": []
+    });
