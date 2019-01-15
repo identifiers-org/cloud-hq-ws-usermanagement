@@ -23,7 +23,7 @@ db.user.insert({
     "verified": "true",
     "active": "true",
     "roles": [
-        {"$ref": "role", "$id": ObjectId("1")}
+        {"$ref": "role", "$id": ObjectId("5c3dcd03a0cf1dd3c021be10")}
     ],
         "accountVerificationTokens": []
     });
@@ -34,7 +34,7 @@ db.user.insert({
     "verified": "true",
     "active": "true",
     "roles": [
-        {"$ref": "role", "$id": ObjectId("2")}
+        {"$ref": "role", "$id": ObjectId("5c3dcd03a0cf1dd3c021be11")}
     ],
         "accountVerificationTokens": []
     });
