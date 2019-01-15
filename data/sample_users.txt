@@ -27,3 +27,14 @@ db.user.insert({
     ],
         "accountVerificationTokens": []
     });
+
+db.user.insert({
+    "email": "user@fakemail.com",
+    "password": "{bcrypt}$2a$10$YSPpgNzOw2aIoPixlK655eEvQtsDuiFCMJKKej6PkaXoH38f9c.RW",
+    "verified": "true",
+    "active": "true",
+    "roles": [
+        {"$ref": "role", "$id": ObjectId("2")}
+    ],
+        "accountVerificationTokens": []
+    });
