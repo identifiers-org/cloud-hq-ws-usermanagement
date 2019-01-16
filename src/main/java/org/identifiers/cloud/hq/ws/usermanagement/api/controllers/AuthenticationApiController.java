@@ -23,8 +23,8 @@ public class AuthenticationApiController {
     // TODO - Mark this endpoint as not authenticated
     @GetMapping("/unprotected")
     public @ResponseBody
-    String unprotectedEndpoint(Principal principal) {
-        return "This is the unprotected endpoint - " + principal;
+    String unprotectedEndpoint() {
+        return "This is the unprotected endpoint - ";
     }
 
     @GetMapping("/protected")
