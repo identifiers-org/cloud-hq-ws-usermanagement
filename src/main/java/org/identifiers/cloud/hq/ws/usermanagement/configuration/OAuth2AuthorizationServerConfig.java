@@ -43,6 +43,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     @Bean
     public JwtAccessTokenConverter accessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+        // TODO - Change this to public/private key later on
         converter.setSigningKey("123");
         return converter;
     }
