@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -32,6 +33,9 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints.tokenStore(tokenStore())
@@ -42,7 +46,12 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         // TODO
-        clients.inMemory().withClient("memclient").secret("$2a$10$YSPpgNzOw2aIoPixlK655eEvQtsDuiFCMJKKej6PkaXoH38f9c.RW").scopes("read");
+        clients.inMemory()
+                .withClient("memclient")
+                .secret(passwordEncoder.encode("password"))
+                .authorizedGrantTypes("password")
+                .scopes("get_token")
+                .autoApprove(true);
     }
 
     @Override
