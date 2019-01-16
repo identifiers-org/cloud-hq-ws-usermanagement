@@ -71,7 +71,7 @@ dev_container_build: clean container_production_build
 # Folders
 tmp:
 	@echo "<===|DEVOPS|===> [FOLDER] Creating root folder for temporary data"
-	mkdir tmp
+	@mkdir tmp
 
 clean:
 	@echo "<===|DEVOPS|===> [CLEAN] Cleaning the space"
