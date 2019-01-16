@@ -1,5 +1,7 @@
 package org.identifiers.cloud.hq.ws.usermanagement.configuration;
 
+import org.springframework.context.annotation.Configuration;
+
 /**
  * Project: user-management
  * Package: org.identifiers.cloud.hq.ws.usermanagement.configuration
@@ -8,5 +10,7 @@ package org.identifiers.cloud.hq.ws.usermanagement.configuration;
  * @author Manuel Bernal Llinares <mbdebian@gmail.com>
  * ---
  */
+@Configuration
 public class OAuth2AuthorizationServerConfig {
+    // TODO
 }
