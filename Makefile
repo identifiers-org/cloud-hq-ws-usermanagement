@@ -27,7 +27,7 @@ set_next_development_version:
 deploy: clean container_production_push
 	@echo "<===|DEVOPS|===> [DEPLOY] Deploying service container version ${tag_version}"
 
-development_env_up:
+development_env_up: jwt_keypair
 	@echo "<===|DEVOPS|===> [ENVIRONMENT] Bringing development environment UP"
 	@docker-compose -f $(docker_compose_development_file) up -d
 	@# TODO Clean this way of referencing the target name in future iterations
@@ -40,6 +40,9 @@ development_env_down:
 	@# TODO Clean this way of referencing the target name in future iterations
 	@rm -f development_env_up
 	@touch development_env_down
+
+jwt_keypair:
+	@echo "<===|DEVOPS|===> [CRYPTO] Generating a key pair for JWT signing"
 
 development_run_tests: development_env_up
 	@echo "<===|DEVOPS|===> [TESTS] Running Unit Tests"
@@ -70,4 +73,4 @@ clean:
 	@mvn clean > /dev/null
 	@mvn versions:commit
 
-.PHONY: all clean app_structure container_production_build container_production_push dev_container_build deploy release sync_project_version set_next_development_version
+.PHONY: all clean app_structure container_production_build container_production_push dev_container_build deploy release sync_project_version set_next_development_version jwt_keypair
