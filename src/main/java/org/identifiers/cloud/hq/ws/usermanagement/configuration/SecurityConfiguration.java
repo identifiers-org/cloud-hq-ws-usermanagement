@@ -55,8 +55,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         // HTTP Basic based authentication
         http
                 .csrf().disable()
+                .authorizeRequests().antMatchers("/authenticationApi/unprotected").permitAll()
+                .and()
                 .authorizeRequests().anyRequest().authenticated()
-                .and().httpBasic()
-                .and().sessionManagement().disable();
+                .and()
+                .httpBasic()
+                .and()
+                .sessionManagement().disable();
     }
 }
