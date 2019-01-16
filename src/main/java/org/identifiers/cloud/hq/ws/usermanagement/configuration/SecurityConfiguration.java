@@ -28,6 +28,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        // TODO - Here is where I will inject the authentication provider based on JWTs
         auth
                 .inMemoryAuthentication()
                 .withUser("memuser")
