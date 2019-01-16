@@ -1,6 +1,8 @@
 package org.identifiers.cloud.hq.ws.usermanagement.configuration;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 
 /**
  * Project: user-management
@@ -11,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * ---
  */
 @Configuration
-public class OAuth2AuthorizationServerConfig {
+@EnableAuthorizationServer
+public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
     // TODO
 }
