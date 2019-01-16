@@ -61,12 +61,17 @@ container_production_build: app_structure
 	@docker build -t $(container_name):$(tag_version) -t $(container_name):latest .
 
 container_production_push: container_production_build
-	@echo "<===|DEVOPS|===> [PUBLISH]> Production container $(container_name):$(tag_version)"
+	@echo "<===|DEVOPS|===> [PUBLISH] Production container $(container_name):$(tag_version)"
 	@docker push $(container_name):$(tag_version)
 	@docker push $(container_name):latest
 
 dev_container_build: clean container_production_build
 	@echo "<===|DEVOPS|===> [DEV] Preparing local container"
+
+# Folders
+tmp:
+	@echo "<===|DEVOPS|===> [FOLDER] Creating root folder for temporary data"
+	mkdir tmp
 
 clean:
 	@echo "<===|DEVOPS|===> [CLEAN] Cleaning the space"
