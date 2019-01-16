@@ -41,7 +41,7 @@ development_env_down:
 	@rm -f development_env_up
 	@touch development_env_down
 
-jwt_keypair:
+jwt_keypair: tmp
 	@echo "<===|DEVOPS|===> [CRYPTO] Generating a key pair for JWT signing"
 
 development_run_tests: development_env_up
