@@ -42,7 +42,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         // TODO
-        super.configure(clients);
+        clients.inMemory().withClient("memclient").secret("$2a$10$YSPpgNzOw2aIoPixlK655eEvQtsDuiFCMJKKej6PkaXoH38f9c.RW").scopes("read");
     }
 
     @Override
